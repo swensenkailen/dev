@@ -1,3 +1,3 @@
 # About
 
-Contains all work done in PureData
+This folder contains all work done in PureData
