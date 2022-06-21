@@ -1,0 +1,4 @@
+juce/plugins/delay/
+juce/plugins/reverb/MoorerReverb/Builds
+juce/plugins/reverb/MoorerReverb/JuceLibraryCode
+puredata/delay/mod_delay

@@ -1,4 +1,4 @@
-#N canvas 780 20 1495 901 12;
+#N canvas 855 169 1495 855 12;
 #X obj -207 26 inlet~;
 #X obj -209 596 outlet~;
 #X obj -208 291 *~;
@@ -6,7 +6,7 @@
 #000000 #000000 0 1;
 #X obj -208 486 +~;
 #X text -172 293 Clean signal gain;
-#X obj 596 56 vsl 15 128 0 2000 0 0 empty empty Delay\\\ Time\\\ (ms)
+#X obj 596 56 vsl 15 128 1000 23000 0 0 empty empty Delay\\\ Time\\\ (ms)
 0 -9 0 8 #fcfcfc #000000 #000000 0 1;
 #X text 24 200 Send block to delay buffer;
 #X obj 231 468 *~;
@@ -23,33 +23,24 @@
 #X floatatom 617 208 5 0 0 0 - - - 0;
 #X text -167 495 Add delay buffer to output signal;
 #X text 145 109 Feedback multiplier (post-gain);
-#X obj 551 -78 inlet;
-#X obj 618 -79 inlet;
-#X obj 688 -79 inlet;
-#X obj 753 -79 inlet;
-#X text -101 -40 // we may want these to be varied outside of this
-program;
-#X obj -183 214 delwrite~ \$0-delay_buffer 2000;
-#X obj 48 275 delread~ \$0-delay_buffer;
+#X obj -183 212 delwrite~ \$0-delay_buffer 2000;
+#X obj 60 395 delread~ \$0-delay_buffer;
+#X text -269 204 comment;
 #X connect 0 0 11 0;
 #X connect 0 0 2 0;
 #X connect 2 0 4 0;
+#X connect 3 0 2 1;
 #X connect 3 0 16 0;
 #X connect 4 0 1 0;
 #X connect 6 0 14 0;
+#X connect 6 0 21 0;
 #X connect 8 0 4 1;
 #X connect 8 0 13 0;
+#X connect 9 0 8 1;
 #X connect 9 0 17 0;
-#X connect 11 0 25 0;
+#X connect 11 0 20 0;
+#X connect 12 0 13 1;
 #X connect 12 0 15 0;
 #X connect 13 0 11 1;
-#X connect 14 0 26 0;
-#X connect 15 0 13 1;
-#X connect 16 0 2 1;
-#X connect 17 0 8 1;
-#X connect 20 0 16 0;
-#X connect 21 0 14 0;
-#X connect 22 0 15 0;
-#X connect 23 0 17 0;
-#X connect 26 0 8 0;
+#X connect 21 0 8 0;
 #X coords 0 -1 1 1 150 330 1 520 18;

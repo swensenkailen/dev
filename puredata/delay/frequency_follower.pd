@@ -1,0 +1,12 @@
+#N canvas 380 513 641 300 12;
+#X floatatom 183 171 5 0 0 0 - - - 0;
+#X obj 183 83 sigmund~ pitch;
+#X obj 183 122 mtof;
+#X obj 182 21 inlet~;
+#X obj 183 210 outlet~;
+#X text 238 173 // Returns frequency of input signal;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 45 50 1 178 145;

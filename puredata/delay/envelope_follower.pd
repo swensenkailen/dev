@@ -1,0 +1,25 @@
+#N canvas 643 384 820 300 12;
+#X obj 135 95 env~;
+#X obj 213 92 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X floatatom 135 204 5 0 0 0 - - - 0;
+#X obj 136 124 dbtorms~;
+#X obj 135 178 snapshot~;
+#X obj 161 149 metro;
+#X obj 213 65 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 135 41 inlet~;
+#X obj 270 22 inlet;
+#X obj 135 258 outlet;
+#X text 251 61 // Returns amplitude of input signal \, with on/off
+switch;
+#X connect 0 0 3 0;
+#X connect 2 0 1 0;
+#X connect 2 0 9 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 0 0;
+#X connect 8 0 6 0;
+#X coords 0 -1 1 1 25 200 1 208 30;
